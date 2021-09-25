@@ -1,0 +1,48 @@
+.container {
+    max-width: 500px;
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 300px;
+    border: 1px solid steelblue;
+    padding: 30px;
+    border-radius: 5px;
+  }
+
+  /* Button Styles */
+
+  .buttons {
+    position: relative;
+    margin: 32px;
+}
+
+.button {
+    text-decoration: none;
+    padding: 20px 50px;
+    font-size: 1.25rem;
+    position: relative;
+    margin: 32px;
+}
+
+.button-2 {
+    color:black;
+}
+
+.button-2::after, .button-2::before {
+    border: 3px solid #000;
+    content: "";
+    position: absolute;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    left: 0;
+    bottom:0;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.button-2:hover::after {
+    transform: translate(-5px, -5px);
+}
+
+.button-2:hover::before {
+    transform: translate(5px, 5px);
+}
